@@ -1,0 +1,170 @@
+% Modelo Trabalho ABNT %
+
+\documentclass[12pt,a4paper,oneside]{abntex2}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[brazil]{babel} %lingua do texto
+\usepackage[utf8]{inputenc} %permite caracteres como acentos e cedilhas
+\usepackage{times} %usa a fonte times 
+\setlength{\parindent}{1.25cm} %identação do parágrafo
+\usepackage{indentfirst} % identa primeiro parágrafo % 
+\usepackage{graphicx} %incluir figuras
+\usepackage{lastpage} %para obter o número da última página
+\pagenumbering{arabic} %Numeração de página
+
+\author{Luiz Henrique Gariglio dos Santos}
+\title{TÍTULO: subtítulo} 
+\date{Ano}
+\instituicao{UNIVERSIDADE FEDERAL DE MINAS GERAIS}
+\local{Belo Horizonte}
+\preambulo{ Trabalho de Conclusão de Curso apresentado ao Curso de Engenharia de Controle e Automação da Universidade Federal de Minas Gerais, como requisito parcial para o grau de bacharel em Engenharia de Controle e Automação.}
+\orientador[Orientador: ]{Nome}
+\coorientador[Coorientador: ]{Nome}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+
+\renewcommand{\imprimircapa}{
+	\begin{capa}
+		\center 
+		{\normalsize \textbf{\imprimirinstituicao} }\\[5cm]
+		{\normalsize\imprimirautor}\\[4cm]
+		{\normalsize\textbf{\imprimirtitulo}}\\
+		\vfill
+		{\normalsize\imprimirlocal}\\
+		{\normalsize\imprimirdata}\\
+		
+	\end{capa}
+}
+
+\newcommand{\folhaderostonova}{
+	\center 
+	{\normalsize \imprimirautor } \\[5cm]
+	{\normalsize \imprimirtitulo} \\[4.5cm]
+	\hspace{.45 \textwidth} % posicionando a minipage
+	\begin{minipage}{.5\textwidth}
+		\imprimirpreambulo \\ \\
+		\imprimirorientadorRotulo \imprimirorientador \\ \\
+		\imprimircoorientadorRotulo \imprimircoorientador
+	\end{minipage}
+	\center
+	\vfill
+	{\normalsize \imprimirlocal } \\
+	{\normalsize \imprimirdata}
+}
+
+%Corrigir títulos
+\addto \captionsbrazil {\renewcommand{\listfigurename}{\normalsize\textbf{LISTA DE ILUSTRAÇÕES}}}
+\addto \captionsbrazil {\renewcommand{\listtablename}{\normalsize\textbf{LISTA DE TABELAS}}}
+\renewcommand{\listadesiglasname}{\normalsize\textbf{LISTA DE ABREVIATURAS E SIGLAS}}
+\addto \captionsbrazil {\renewcommand{\contentsname}{\normalsize\textbf{SUMÁRIO}}}
+
+\renewcommand{\ABNTEXchapterfontsize}{\normalfont\bfseries\normalsize} 
+\renewcommand{\cftchapterfont}{\normalfont\bfseries} % Colocar negrito e fonte nos capítulos no sumário
+
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize\normalfont}
+\renewcommand{\cftsectionfont}{\normalfont} % Tirar negrito das secoes no sumario
+
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalfont\bfseries\normalsize}
+\renewcommand{\cftsubsectionfont}{\normalfont\bfseries} % Colocar negrito das subsecoes no sumario
+
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalfont\normalsize}
+\renewcommand{\cftsubsubsectionfont}{\normalfont} % Tirar negrito subsubsection sumário
+
+\begin{document}
+	\imprimircapa
+	\folhaderostonova
+	\newpage
+	\begin{fichacatalografica}
+		\vspace*{\fill}
+		%\hrule %linha horizontal
+		\begin{table}[h]
+			\footnotesize %tem tamanho 10 quando a letra do trabalho é 12 
+			\begin{tabular}{|p{12.5cm}|}
+				\hline
+				\imprimirautor.\\
+				
+				\hspace{0.5cm} \imprimirtitulo / \imprimirautor, -- \imprimirdata.
+				
+				\hspace{0.5cm} \pageref{LastPage} p. \\
+				
+				\hspace{0.5cm} \imprimirorientadorRotulo \imprimirorientador.
+				
+				\hspace{0.5cm} \imprimirtipotrabalho -- Universidade Federal de Minas Gerais, Faculdade de Engenharia.\\
+				
+				\hspace{0.5cm}
+				1. Palavra chave1.
+				2. Palavra chave2.
+				I. \imprimirtitulo.
+				II. \imprimirorientador.
+				III. Universidade Federal de Minas Gerais,Faculdade de Engenharia. \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+	\end{fichacatalografica}
+	
+	\begin{errata}[\normalsize \textbf{ERRATA}]
+		\flushleftright
+		Santos, Luiz Henrique Gariglio. \textbf{\imprimirtitulo}. \imprimirdata. \imprimirtipotrabalho -- Faculdade de Engenharia, Universidade Federal de Minas Gerais, \imprimirlocal.
+		
+		\begin{table}[htb]
+			\center
+			\footnotesize
+			\begin{tabular}{p{1.4cm}p{1cm}p{3cm}p{3cm}}
+				\textbf{Página} & \textbf{Linha} & \textbf{Onde se lê}  & \textbf{Leia-se}
+			\end{tabular}
+		\end{table}
+	\end{errata}
+	
+	%\includepdf{folhadeaprovacao_final.pdf}
+
+	\begin{dedicatoria}% Opcional %
+		\vspace*{\fill}
+		\begin{flushright}
+			Dedico esse modelo ao Eu do futuro...
+		\end{flushright}
+	\end{dedicatoria}
+
+	\begin{agradecimentos}[\normalsize \textbf{AGRADECIMENTOS}]  % Opcional % corrigir
+		À mim.
+	\end{agradecimentos}
+
+	\begin{epigrafe} % Opcional %
+		\vspace*{\fill}
+		\begin{flushright} % alinha o texto a direita %
+			\textit{"Citação"\\Autor}
+		\end{flushright} 
+	\end{epigrafe}
+
+	\begin{resumo}[\normalsize \textbf{RESUMO}]
+		Resumo em português.
+		
+		\noindent \textbf{Palavras-chave}: 
+	\end{resumo}
+	
+	\begin{resumo}[\normalsize \textbf{ABSTRACT}]
+		
+		\begin{otherlanguage*}{english}
+			Resumo em inglês.
+			
+			\noindent \textbf{Keywords: }
+		\end{otherlanguage*}
+
+	\end{resumo}
+
+	\listoffigures*
+	\newpage
+	\listoftables*
+	\begin{siglas} % Lista de Siglas % % Opcional %
+		\item[Sigla] Significado
+	\end{siglas}
+	\tableofcontents* \thispagestyle{empty} % Retira a numeração da página
+	\mainmatter % Inicia a numeração das páginas
+	
+	\chapter{INTRODUÇÃO}
+	\chapter{DESENVOLVIMENTO}
+	\chapter{CONCLUSÃO}
+	
+	\begin{thebibliography}{1}
+		\bibitem{ref1}  $\ll$ endereço do site $\gg$
+	\end{thebibliography}
+
+\end{document}
