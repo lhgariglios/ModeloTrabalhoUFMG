@@ -14,7 +14,7 @@
 \author{Luiz Henrique Gariglio dos Santos}
 \title{TÍTULO: subtítulo} 
 \date{Ano}
-\instituicao{UNIVERSIDADE FEDERAL DE MINAS GERAIS}
+\instituicao{UNIVERSIDADE FEDERAL DE MINAS GERAIS\\Escola de Engenharia}
 \local{Belo Horizonte}
 \preambulo{ Trabalho de Conclusão de Curso apresentado ao Curso de Engenharia de Controle e Automação da Universidade Federal de Minas Gerais, como requisito parcial para o grau de bacharel em Engenharia de Controle e Automação.}
 \orientador[Orientador: ]{Nome}
@@ -37,7 +37,7 @@
 \newcommand{\folhaderostonova}{
 	\center 
 	{\normalsize \imprimirautor } \\[5cm]
-	{\normalsize \imprimirtitulo} \\[4.5cm]
+	{\normalsize \textbf{\imprimirtitulo}} \\[4.5cm]
 	\hspace{.45 \textwidth} % posicionando a minipage
 	\begin{minipage}{.5\textwidth}
 		\imprimirpreambulo \\ \\
@@ -56,17 +56,17 @@
 \renewcommand{\listadesiglasname}{\normalsize\textbf{LISTA DE ABREVIATURAS E SIGLAS}}
 \addto \captionsbrazil {\renewcommand{\contentsname}{\normalsize\textbf{SUMÁRIO}}}
 
-\renewcommand{\ABNTEXchapterfontsize}{\normalfont\bfseries\normalsize} 
-\renewcommand{\cftchapterfont}{\normalfont\bfseries} % Colocar negrito e fonte nos capítulos no sumário
+\renewcommand{\ABNTEXchapterfontsize}{\normalfont\normalsize} 
+\renewcommand{\cftchapterfont}{\normalfont}
 
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize\normalfont}
-\renewcommand{\cftsectionfont}{\normalfont} % Tirar negrito das secoes no sumario
+\renewcommand{\cftsectionfont}{\normalfont} 
 
-\renewcommand{\ABNTEXsubsectionfontsize}{\normalfont\bfseries\normalsize}
-\renewcommand{\cftsubsectionfont}{\normalfont\bfseries} % Colocar negrito das subsecoes no sumario
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalfont\normalsize}
+\renewcommand{\cftsubsectionfont}{\normalfont} 
 
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalfont\normalsize}
-\renewcommand{\cftsubsubsectionfont}{\normalfont} % Tirar negrito subsubsection sumário
+\renewcommand{\cftsubsubsectionfont}{\normalfont} 
 
 \begin{document}
 	\imprimircapa
@@ -101,7 +101,7 @@
 		
 	\end{fichacatalografica}
 	
-	\begin{errata}[\normalsize \textbf{ERRATA}]
+	\begin{errata}[\normalsize ERRATA]
 		\flushleftright
 		Santos, Luiz Henrique Gariglio. \textbf{\imprimirtitulo}. \imprimirdata. \imprimirtipotrabalho -- Faculdade de Engenharia, Universidade Federal de Minas Gerais, \imprimirlocal.
 		
@@ -116,14 +116,14 @@
 	
 	%\includepdf{folhadeaprovacao_final.pdf}
 
-	\begin{dedicatoria}% Opcional %
+	\begin{dedicatoria} % Opcional %
 		\vspace*{\fill}
 		\begin{flushright}
 			Dedico esse modelo ao Eu do futuro...
 		\end{flushright}
 	\end{dedicatoria}
 
-	\begin{agradecimentos}[\normalsize \textbf{AGRADECIMENTOS}]  % Opcional % corrigir
+	\begin{agradecimentos}[\normalsize AGRADECIMENTOS]  % Opcional % corrigir
 		À mim.
 	\end{agradecimentos}
 
@@ -134,13 +134,13 @@
 		\end{flushright} 
 	\end{epigrafe}
 
-	\begin{resumo}[\normalsize \textbf{RESUMO}]
+	\begin{resumo}[\normalsize RESUMO]
 		Resumo em português.
 		
 		\noindent \textbf{Palavras-chave}: 
 	\end{resumo}
 	
-	\begin{resumo}[\normalsize \textbf{ABSTRACT}]
+	\begin{resumo}[\normalsize ABSTRACT]
 		
 		\begin{otherlanguage*}{english}
 			Resumo em inglês.
