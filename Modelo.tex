@@ -11,7 +11,7 @@
 \usepackage{lastpage} %para obter o número da última página
 \pagenumbering{arabic} %Numeração de página
 
-\author{Luiz Henrique Gariglio dos Santos}
+\author{NOME}
 \title{TÍTULO: subtítulo} 
 \date{Ano}
 \instituicao{UNIVERSIDADE FEDERAL DE MINAS GERAIS\\Escola de Engenharia}
@@ -21,10 +21,20 @@
 \coorientador[Coorientador: ]{Nome}
 \tipotrabalho{Trabalho de Conclusão de Curso}
 
+\bibliographystyle{ieeetr}
+\nocite{*}
+\renewcommand{\bibname}{REFERÊNCIAS}
+
 \renewcommand{\imprimircapa}{
 	\begin{capa}
 		\center 
-		{\normalsize \textbf{\imprimirinstituicao} }\\[5cm]
+		%{\normalsize \textbf{\imprimirinstituicao} }\\[5cm]
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.3\textwidth]{principal_completa_ufmg}
+			\label{fig:principalcompletaufmg}
+		\end{figure}
+		{\normalsize BACHARELADO EM ENGENHARIA DE CONTROLE E AUTOMAÇÃO} \\[4.5cm]
 		{\normalsize\imprimirautor}\\[4cm]
 		{\normalsize\textbf{\imprimirtitulo}}\\
 		\vfill
@@ -103,7 +113,7 @@
 	
 	\begin{errata}[\normalsize ERRATA]
 		\flushleftright
-		Santos, Luiz Henrique Gariglio. \textbf{\imprimirtitulo}. \imprimirdata. \imprimirtipotrabalho -- Faculdade de Engenharia, Universidade Federal de Minas Gerais, \imprimirlocal.
+		Nome. \textbf{\imprimirtitulo}. \imprimirdata. \imprimirtipotrabalho -- Faculdade de Engenharia, Universidade Federal de Minas Gerais, \imprimirlocal.
 		
 		\begin{table}[htb]
 			\center
@@ -119,12 +129,12 @@
 	\begin{dedicatoria} % Opcional %
 		\vspace*{\fill}
 		\begin{flushright}
-			Dedico esse modelo ao Eu do futuro...
+			Dedicatória...
 		\end{flushright}
 	\end{dedicatoria}
 
 	\begin{agradecimentos}[\normalsize AGRADECIMENTOS]  % Opcional % corrigir
-		À mim.
+		Agradecimentos.
 	\end{agradecimentos}
 
 	\begin{epigrafe} % Opcional %
@@ -163,8 +173,6 @@
 	\chapter{DESENVOLVIMENTO}
 	\chapter{CONCLUSÃO}
 	
-	\begin{thebibliography}{1}
-		\bibitem{ref1}  $\ll$ endereço do site $\gg$
-	\end{thebibliography}
-
+	\bibliography{referencias}
+	
 \end{document}
